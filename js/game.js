@@ -166,24 +166,24 @@ function parse() {
     	+ ", white count: " + newStateArray['whiteMarkerCount'] 
     	+ "\n\n";
     
-    if (newStateArray['blackMarkerCount'] == 4) {
+	if (newStateArray['blackMarkerCount'] == 4) {
     	
-    	// Player has guessed the code correctly!
-    	gameState['codeNotBroken'] = 0;
-    	textOut.value += "You WIN!!\n\nReload the page to play again";
-    }
-    else if (gameState['guessCount'] == 10) {
+		// Player has guessed the code correctly!
+		gameState['codeNotBroken'] = 0;
+		textOut.value += "You WIN!!\n\nReload the page to play again";
+	}
+	else if (gameState['guessCount'] == 10) {
     	
-    	// Player has exhausted all of their guesses, reveal code
-    	gameState['codeNotBroken'] = 0;
-    	textOut.value += "Sorry, your 10 guesses are up!\n\nThe correct code was: "
-    		+ codeArr[0] 
-    		+ codeArr[1]
-    		+ codeArr[2] 
-    		+ codeArr[3] 
-    		+ "\n\nReload the page to play again";
-    }
+		// Player has exhausted all of their guesses, reveal code
+		gameState['codeNotBroken'] = 0;
+		textOut.value += "Sorry, your 10 guesses are up!\n\nThe correct code was: "
+			+ codeArr[0] 
+			+ codeArr[1]
+			+ codeArr[2] 
+			+ codeArr[3] 
+			+ "\n\nReload the page to play again";
+	}
     	    
-    // Write the updated game state to localStorage so that, on page reload, the game knows to restart
-    localStorage.setItem('monstermindGameState', JSON.stringify(gameState));
+	// Write the updated game state to localStorage so that, on page reload, the game knows to restart
+	localStorage.setItem('monstermindGameState', JSON.stringify(gameState));
 }
