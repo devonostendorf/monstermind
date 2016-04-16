@@ -12,7 +12,7 @@ This project builds on ideas from various sources, among them:
 
 * [Anko's JavaScript example](http://gamedev.stackexchange.com/questions/59274/how-to-create-a-text-based-game) (search the page for "Same in JS")
 
-No attribution is necessary to use Monstermind; [I am merely hopeful it will prove useful to you in your projects.]
+No attribution is necessary to use Monstermind; I hope you'll have as much fun playing it as my kids and I have (and maybe learn a bit about how localStorage works, in the process)!
 
 
 ## Installation ##
