@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Monstermind</title>
+	</head>
+	<body>
+		<script src="js/game.js"></script>
+		<textarea id="id_txaOutputWindow" rows="30" cols="55" readonly="readonly"></textarea>
+		<form onSubmit="parse(); return false;">
+			<input type="text" id="id_txtGuessPosn0" maxlength="1" size="1" required="required" />
+			<input type="text" id="id_txtGuessPosn1" maxlength="1" size="1" required="required" />
+			<input type="text" id="id_txtGuessPosn2" maxlength="1" size="1" required="required" />
+			<input type="text" id="id_txtGuessPosn3" maxlength="1" size="1" required="required" />
+			<input type="submit" value="Submit Guess" />
+		</form>
+	</body>
+</html>
