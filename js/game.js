@@ -8,9 +8,9 @@ window.onload = function WindowLoad(event) {
 
 	// Check for an existing game
 	var gameStateJSON = window.localStorage.getItem("monstermindGameState"); 
-    if (gameStateJSON) { 
+	if (gameStateJSON) { 
 
-    	// Populate game state from localStorage
+		// Populate game state from localStorage
 		gameState = JSON.parse(gameStateJSON);
 		codeArr = gameState['codeArr'];
 		
@@ -38,7 +38,7 @@ function newGame() {
 		codeArr[i] = String.fromCharCode(Math.floor((Math.random() * 6) + 65));
 	}
 
-    // Initialize game state
+	// Initialize game state
 	gameState = { "codeArr": codeArr, "codeNotBroken": 1, "guessCount": 0 };
 
 	// Put game state into localStorage
@@ -46,14 +46,14 @@ function newGame() {
 		
 	// Blank out game board and welcome player to game
 	var textOut = document.getElementById("id_txaOutputWindow");
-    textOut.value = "";
-    textOut.value += "Welcome to Monstermind.  You have 10 guesses to get the code right.  The code is 4 characters long and consists of letters 'A' through 'F'.  You will get a black marker for each letter that you guess correctly and a white marker for each letter that is contained in the code but in the wrong position.  Feel free to make your first guess!\n\n";
+	textOut.value = "";
+	textOut.value += "Welcome to Monstermind.  You have 10 guesses to get the code right.  The code is 4 characters long and consists of letters 'A' through 'F'.  You will get a black marker for each letter that you guess correctly and a white marker for each letter that is contained in the code but in the wrong position.  Feel free to make your first guess!\n\n";
     
-    // Blank out player's guesses from text input fields (if they exist from a previous game)
-    document.getElementById("id_txtGuessPosn0").value = "";
-    document.getElementById("id_txtGuessPosn1").value = "";
-    document.getElementById("id_txtGuessPosn2").value = "";
-    document.getElementById("id_txtGuessPosn3").value = "";
+	// Blank out player's guesses from text input fields (if they exist from a previous game)
+	document.getElementById("id_txtGuessPosn0").value = "";
+	document.getElementById("id_txtGuessPosn1").value = "";
+	document.getElementById("id_txtGuessPosn2").value = "";
+	document.getElementById("id_txtGuessPosn3").value = "";
 }
 
 function processGuess(guessArr) {
